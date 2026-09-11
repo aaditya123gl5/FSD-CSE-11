@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo Fetch in JS</title>
+    <h1 align="center">List of Products</h1>
+      <table border="1" cellpadding="4" cellspacing="0">
+        <th>
+            <tr>
+                <th>Sr No:</th>
+                <th>Tittle</th>
+                <th>Image</th>
+                <th>Category</th>
+                <th>Description</th>
+                <th>Price(₹)</th>
+                <th> Stock</th>
+                <th class="cart">Add to Cart</th>
+            </tr>
+        </th>
+        <tbody id="data1">
+
+        </tbody>
+    </table>
+    <br>
+    <br>
+    <button id="btn" onclick="getSelected()">Place Order</button>
+    <script>
+        
+        const URL="https://dummyjson.com/products"
+        async  function laodProduct(){
+            try{
+                const ele= document.getElementById("data1");
+                const res = await fetch(URL);
+                const data = await res.json();
+                console.log("Data=" ,data);
+              data.products.map((i) => {
+                
+                ele.innerHTML +=  `<tr>
+                     <td> ${i.id}</td>
+                      <td>  ${i.title} </td>
+                       <td><img src="${i.images[0]}" width="100px" height="100px">  </td>
+                       <td>   ${i.category} </td>
+                         <td>   ${i.description} </td>
+                           <td>   ₹${(i.price*rate).toFixed(2)} </td>
+                           <td> ${i.stock} </td>
+                           <td>
+                                <input 
+                                    type="checkbox" 
+                                    value="${i.id}"
+                                >
+                            </td>
+
+                    </tr>`
+                })
+            }
+            catch(err){
+                console.log("ERROR",err)
+            }
+            
+
+        }
+         async function getRate(){
+                try{
+                    const URL="https://open.er-api.com/v6/latest/USD";
+                    const res = await fetch(URL)
+                    const data = await res.json()
+                    console.log("rate = ", data.rates.INR)
+                    return Number(data.rates.INR)
+
+                }
+                catch(err){
+                    console.log("ERROR",err)
+            }
+            }
+        laodProduct();
+         const test =async () => {
+             rate = await getRate()
+        }
+        test();
+
+        let arr = [];
+        function getSelected(){
+            let checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');
+            arr = [];
+            checkboxes.forEach((checkbox) => {
+                arr.push(checkbox.value);
+            });
+            console.log("Selected IDs:", arr);
+        }
+        
+      
+       
+    </script>
+
+    <style>
+        table{
+           
+            margin: auto;
+            padding: 20px;
+            color: brown;
+            border: 2px solid blue;
+            
+           
+        }
+        #btn{
+            border-radius: 3px;
+            margin-left: 50%;
+            padding: 10px;
+            background-color: rgb(90, 225, 230);
+            color: rgb(157, 18, 18);
+            font-size: 15px;
+            align-items: left;
+        }
+    </style>
+</head>
+<body>
+  
+    
+</body>
+</html>
