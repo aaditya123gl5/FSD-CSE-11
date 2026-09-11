@@ -1,0 +1,48 @@
+import React from 'react'
+import { Link } from 'react-router-dom'
+
+const Navbar = ({ cartCount }) => {
+
+    return (
+        <nav className="navbar">
+
+            <Link to="/" className="brand">
+                🎓 CourseCart
+            </Link>
+
+            <div className="nav-links">
+
+                <Link to="/">
+                    Courses
+                </Link>
+
+                <Link to="/myorders">
+                    My Orders
+                </Link>
+
+                <Link to="/profile">
+                    Profile
+                </Link>
+
+                <Link to="/settings">
+                    Settings
+                </Link>
+
+                <Link
+                    to="/mycart"
+                    className="cart-link"
+                >
+                    🛒 Cart
+
+                    <span className="cart-badge">
+                        {cartCount}
+                    </span>
+                </Link>
+
+            </div>
+
+        </nav>
+    )
+}
+
+export default Navbar
