@@ -6,4 +6,4 @@ function calculateSum(num1, num2, callback) {
     callback(sum); 
 }
 
-calculateSum(5, 10, logResult);
+calculateSum(5, 9, logResult);
