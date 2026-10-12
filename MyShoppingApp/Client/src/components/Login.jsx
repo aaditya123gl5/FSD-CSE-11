@@ -11,7 +11,7 @@ const Login = () => {
     if (username === "" || password === "") {
       setMessage("Please enter username and password");
     } else {
-      setMessage("Login Successful! Welcome " + username);
+      setMessage("Login Successful! Welcome " +username);
     }
   };
 
