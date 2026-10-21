@@ -5,8 +5,8 @@ let marks =90;
 console.log("Student Details");
 
 console.log("Name:",name);
-console.log("College:", college);
-console.log("Marks:", marks);
+console.log("College:",college);
+console.log("Marks:",marks);
 
 marks = 90;
 
