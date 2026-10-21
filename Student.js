@@ -1,6 +1,6 @@
 const name="Aaditya";
 const college="Engineering College";
-let marks = 85;
+let marks =90;
 console.log("Student Details");
 
 console.log("Name:",name);
