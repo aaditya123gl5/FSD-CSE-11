@@ -8,6 +8,6 @@ console.log("Name:",name);
 console.log("College:",college);
 console.log("Marks:",marks);
 
-marks = 90;
+marks=90;
 
 console.log("Updated Marks:", marks);
