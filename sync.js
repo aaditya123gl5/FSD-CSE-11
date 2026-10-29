@@ -11,6 +11,6 @@ async function runProfileUpdate() {
     const user=await fetchUserData(); 
     
     console.log(`2. Profile retrieved for user: ${user.username}`);
-    console.log("3. UI successfully updated.");
+    console.log("3. UI successfull y updated.");
 }
 runProfileUpdate();
