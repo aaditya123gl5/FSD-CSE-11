@@ -3,7 +3,7 @@ function register(cb){
     setTimeout(()=>{
          console.log("Registered..")
          cb()
-    }, 7000)
+    },7000)
 }
 function login(cb){
     setTimeout(()=>{
