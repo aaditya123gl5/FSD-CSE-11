@@ -16,7 +16,7 @@ function fetchData(cb){
     setTimeout(()=>{
          console.log("Data fetched..")
           cb()
-    },3000)
+    },1000)
 }
 function DisplayData(){
     setTimeout(()=>{
