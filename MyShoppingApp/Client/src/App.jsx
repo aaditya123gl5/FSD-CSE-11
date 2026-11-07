@@ -11,7 +11,6 @@ function App() {
         { id: 3, name: "Headphones", price: 2000},
         { id: 4, name: "Keyboard", price: 1000}
     ];
-
     function add(product) {
         setCart([...cart, product]);
     }
@@ -23,9 +22,7 @@ function App() {
     return (
         <>
             <Navbar cartCount={cart.length} />
-
             <h1>Products</h1>
-
             <section className="products">
 
                 {products.map(product => (
