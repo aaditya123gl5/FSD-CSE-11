@@ -1,4 +1,4 @@
-const getDiscountprice=(price,discount) => {
+const getDiscountprice=(price,discount)=>{
   const reduction=price*(discount/100);
   return price-reduction;
 };
