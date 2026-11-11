@@ -3,4 +3,4 @@ const getDiscountprice=(price,discount)=>{
   return price-reduction;
 };
 
-console.log(getDiscountprice(100, 20)); 
+console.log(getDiscountprice(100,20)); 
