@@ -19,7 +19,6 @@ const Login = () => {
 
 const App = () => {
   return (
-  
     <BrowserRouter>
       <nav>
         <Link to="/">Home</Link> |{" "}
