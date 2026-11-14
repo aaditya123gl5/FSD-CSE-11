@@ -29,12 +29,12 @@ const App = () => {
       </nav>
 
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/counter" element={<Counter />} />
-        <Route path="/stopwatch" element={<Stopwatch />} />
-        <Route path="/shopping" element={<Shopping />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="*" element={<h1>Error: Page Not Found</h1>} />
+        <Route path="/" element={<Home />}/>
+        <Route path="/counter" element={<Counter />}/>
+        <Route path="/stopwatch" element={<Stopwatch />}/>
+        <Route path="/shopping" element={<Shopping />}/>
+        <Route path="/login" element={<Login />}/>
+        <Route path="*" element={<h1>Error: Page Not Found</h1>}/>
       </Routes>
    </BrowserRouter>
   );
