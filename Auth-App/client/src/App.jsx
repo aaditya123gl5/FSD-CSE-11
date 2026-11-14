@@ -36,8 +36,7 @@ const App = () => {
         <Route path="/login" element={<Login />} />
         <Route path="*" element={<h1>Error: Page Not Found</h1>} />
       </Routes>
-
-    </BrowserRouter>
+   </BrowserRouter>
   );
 };
 
