@@ -16,10 +16,8 @@
     outline-offset: 2px;
   }
 }
-
 .hero {
   position: relative;
-
   .base,
   .framework,
   .vite {
@@ -144,7 +142,6 @@
     li {
       flex: 1 1 calc(50% - 8px);
     }
-
     a {
       width: 100%;
       justify-content: center;
