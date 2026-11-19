@@ -9,7 +9,7 @@ function login(cb){
     setTimeout(()=>{
         console.log("User Logged in..")
         cb()
-    },5000)
+    },8000)
     
 }
 function fetchData(cb){
