@@ -21,7 +21,7 @@ function fetchData(cb){
 function DisplayData(){
     setTimeout(()=>{
          console.log("Data Displayed..")
-    },8000)
+    },9000)
 }
 register(()=>{
     login(()=>{
